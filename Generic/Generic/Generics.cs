@@ -6,25 +6,28 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    public class Generics
+    internal class MaxNumber<R> where R : IComparable
     {
-        public string First, Second, Third;
-        public string data(string First, string Second, string Third)
-        {
-            if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
-            {
-                return First;
-            }
-            else if (Second.CompareTo(Third) > 0 && Second.CompareTo(First) > 0)
-            {
-                return Second;
-            }
-            else if (Third.CompareTo(First) > 0 && Third.CompareTo(Second) > 0)
-            {
-                return Third;
-            }
-            return First;
+        public R[] value;
 
+        public MaxNumber(R[] value)
+        {
+            this.value = value;
+        }
+        public R[] Sort(R[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+        public R MaxValue(R[] values)
+        {
+            var SortedValues = Sort(values);
+            return SortedValues[^1];
+        }
+        public R MaxMethod()
+        {
+            var Max = MaxValue(this.value);
+            return Max;
         }
     }
 }
