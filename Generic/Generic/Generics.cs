@@ -8,22 +8,22 @@ namespace Generic
 {
     public class Generics
     {
-        public int Num1, Num2, Num3;
-        public double data(double Num1, double Num2, double Num3)
+        public string First, Second, Third;
+        public string data(string First, string Second, string Third)
         {
-            if (Num1.CompareTo(Num2) > 0 && Num1.CompareTo(Num3) > 0)
+            if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
             {
-                return Num1;
+                return First;
             }
-            else if (Num2.CompareTo(Num3) > 0 && Num2.CompareTo(Num1) > 0)
+            else if (Second.CompareTo(Third) > 0 && Second.CompareTo(First) > 0)
             {
-                return Num2;
+                return Second;
             }
-            else if (Num3.CompareTo(Num1) > 0 && Num3.CompareTo(Num2) > 0)
+            else if (Third.CompareTo(First) > 0 && Third.CompareTo(Second) > 0)
             {
-                return Num3;
+                return Third;
             }
-            return Num1;
+            return First;
 
         }
     }

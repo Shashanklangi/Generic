@@ -5,10 +5,9 @@ namespace Generic
     {
         public static void Main(string[] args)
         {
-            Generics Number = new Generics();
-            double MaximumNumber = Number.data(11.54, 67.82, 24.1);
-            Console.WriteLine("Maximum Floating Integer is " + MaximumNumber);
-
+            Generics alpha = new Generics();
+            string Maxistring = alpha.data("Apple","Banana","Pineapple");
+            Console.WriteLine("Maximum string is " + Maxistring);
         }
     }
 }
