@@ -5,17 +5,17 @@ namespace Generic
     {
         public static void Main(string[] args)
         {
-            int[] intArray = { 110, 123, 613, 723, 231, 444, 568, };
+            int[] intArray = { 19, 213, 635, 734, 231, 56 };
             MaxNumber<int> maxNumber = new MaxNumber<int>(intArray);
-            Console.WriteLine("The Maximum Integer is " + maxNumber.MaxMethod());
+            maxNumber.PrintMax();
 
-            double[] doubleArray = { 41.54, 34.1, 5.33, 89.19, 1.71 };
+            double[] doubleArray = { 41.55, 34.112, 156.33, 829.49, 111.71 };
             MaxNumber<double> maxDouble = new MaxNumber<double>(doubleArray);
-            Console.WriteLine("The Maximum Float Value is " + maxDouble.MaxMethod());
+            maxDouble.PrintMax();
 
-            string[] stringArray = { "Apple", "Lemon", "Banana", "Pineapple","Grapes" };
+            string[] stringArray = { "Apple", "Grapes", "Banana", "Jackfruit","Pineapple" };
             MaxNumber<string> maxString = new MaxNumber<string>(stringArray);
-            Console.WriteLine("The Maximum String Value is " + maxString.MaxMethod());
+            maxString.PrintMax(); ;
         }
     }
 }
