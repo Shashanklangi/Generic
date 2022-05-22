@@ -6,8 +6,8 @@ namespace Generic
         public static void Main(string[] args)
         {
             Generics Number = new Generics();
-            int MaximumNumber = Number.data(11, 67, 24);
-            Console.WriteLine("Maximum Integer is " + MaximumNumber);
+            double MaximumNumber = Number.data(11.54, 67.82, 24.1);
+            Console.WriteLine("Maximum Floating Integer is " + MaximumNumber);
 
         }
     }
