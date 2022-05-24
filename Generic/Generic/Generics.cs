@@ -6,33 +6,32 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    internal class MaxNumber<R> where R : IComparable
+    public class Generics
     {
-        public R[] value;
+        public string First, Second, Third;
+        public static string MaximumStringNumber(string firstString, string secondString, string thirdString)
+        {
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) >= 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) >= 0)
+            {
+                return firstString;
+            }
 
-        public MaxNumber(R[] value)
-        {
-            this.value = value;
-        }
-        public R[] Sort(R[] values)
-        {
-            Array.Sort(values);
-            return values;
-        }
-        public R MaxValue(params R[] values)
-        {
-            var SortedValues = Sort(values);
-            return SortedValues[^1];
-        }
-        public R MaxMethod()
-        {
-            var Max = MaxValue(this.value);
-            return Max;
-        }
-        public void PrintMax()
-        {
-            var Max = MaxValue(this.value);
-            Console.WriteLine("Maximum value is " + Max);
+            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) >= 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) >= 0)
+            {
+                return secondString;
+            }
+
+            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) >= 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) >= 0)
+            {
+                return thirdString;
+            }
+            throw new Exception("FirstString,SecondString and ThirdString are same");
         }
     }
 }
